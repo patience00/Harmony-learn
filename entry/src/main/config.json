@@ -1,0 +1,64 @@
+{
+  "app": {
+    "bundleName": "com.linchtech.myapplication",
+    "vendor": "linchtech",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.linchtech.myapplication",
+    "name": ".MyApplication",
+    "mainAbility": "com.linchtech.myapplication.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "com.linchtech.myapplication.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.linchtech.myapplication.SecondMainAbility",
+        "icon": "$media:icon",
+        "description": "$string:secondmainability_description",
+        "label": "$string:entry_SecondMainAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.linchtech.myapplication.LongClickAblity",
+        "icon": "$media:icon",
+        "description": "$string:longclickablity_description",
+        "label": "$string:entry_LongClickAblity",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}

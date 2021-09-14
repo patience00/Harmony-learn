@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    ohos:id="$+id:move"
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+<!--    <Text-->
+<!--        ohos:id="$+id:text_helloworld"-->
+<!--        ohos:height="match_content"-->
+<!--        ohos:width="match_content"-->
+<!--        ohos:background_element="$graphic:background_ability_main"-->
+<!--        ohos:layout_alignment="horizontal_center"-->
+<!--        ohos:text="$string:mainability_HelloWorld"-->
+<!--        ohos:text_size="40vp"-->
+<!--        />-->
+    <Text
+        ohos:id="$+id:text_helloworld"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="ctnmm"
+        ohos:text_size="40vp"
+        />
+    <Text
+        ohos:id="$+id:text2"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="$graphic:background_ability_main"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="ctnmm"
+        ohos:text_size="40vp"
+        />
+<!--    <Button-->
+<!--        ohos:id="$+id:button1"-->
+<!--        ohos:height="match_content"-->
+<!--        ohos:width="match_content"-->
+<!--        ohos:background_element="blue"-->
+<!--        ohos:text_size="40fp"-->
+<!--        ohos:bottom_margin="40px"-->
+<!--        ohos:top_margin="40px"-->
+<!--        ohos:text="单击" />-->
+<!--    <Button-->
+<!--        ohos:id="$+id:button2"-->
+<!--        ohos:height="match_content"-->
+<!--        ohos:width="match_content"-->
+<!--        ohos:background_element="blue"-->
+<!--        ohos:text_size="40fp"-->
+<!--        ohos:bottom_margin="40px"-->
+<!--        ohos:top_margin="40px"-->
+<!--        ohos:text="双击" />-->
+<!--    <Button-->
+<!--        ohos:id="$+id:button3"-->
+<!--        ohos:height="match_content"-->
+<!--        ohos:width="match_content"-->
+<!--        ohos:background_element="green"-->
+<!--        ohos:text_size="40fp"-->
+<!--        ohos:bottom_margin="40px"-->
+<!--        ohos:top_margin="40px"-->
+
+<!--        ohos:text="长按" />-->
+
+</DirectionalLayout>

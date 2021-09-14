@@ -1,0 +1,40 @@
+{
+  "string": [
+    {
+      "name": "entry_MainAbility",
+      "value": "主菜单"
+    },
+    {
+      "name": "mainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "mainability_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "entry_SecondMainAbility",
+      "value": "entry_SecondMainAbility"
+    },
+    {
+      "name": "secondmainability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "secondmainability_HelloWorld",
+      "value": "你好，世界"
+    },
+    {
+      "name": "entry_LongClickAblity",
+      "value": "entry_LongClickAblity"
+    },
+    {
+      "name": "longclickablity_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "longclickablity_HelloWorld",
+      "value": "你好，世界"
+    }
+  ]
+}
