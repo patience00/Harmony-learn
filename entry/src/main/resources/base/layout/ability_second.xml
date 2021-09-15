@@ -17,4 +17,12 @@
         ohos:text_size="40vp"
         />
 
+    <Image
+        ohos:id="$+id:notLike"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:image_src="$media:notLike"
+        ohos:background_element="gray"/>
+
+
 </DirectionalLayout>

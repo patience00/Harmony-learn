@@ -6,14 +6,20 @@ import ohos.aafwk.content.Intent;
 import ohos.aafwk.content.Operation;
 import ohos.agp.components.Component;
 import ohos.agp.components.DirectionalLayout;
+import ohos.agp.components.Image;
 import ohos.multimodalinput.event.MmiPoint;
 import ohos.multimodalinput.event.TouchEvent;
 
-public class SecondAbilitySlice extends AbilitySlice implements Component.TouchEventListener {
+public class SecondAbilitySlice extends AbilitySlice implements Component.ClickedListener, Component.DoubleClickedListener, Component.TouchEventListener {
 
 
     private float x;
     private float y;
+    private Image image;
+    /**
+     * false 为没有点赞,true已经点赞
+     */
+    private boolean like = false;
 
     @Override
     public void onStart(Intent intent) {
@@ -21,6 +27,10 @@ public class SecondAbilitySlice extends AbilitySlice implements Component.TouchE
         super.setUIContent(ResourceTable.Layout_ability_second);
         DirectionalLayout layout = (DirectionalLayout) findComponentById(ResourceTable.Id_second);
         layout.setTouchEventListener(this);
+
+        image = (Image) findComponentById(ResourceTable.Id_notLike);
+        layout.setDoubleClickedListener(this);
+        image.setClickedListener(this);
     }
 
     @Override
@@ -74,5 +84,26 @@ public class SecondAbilitySlice extends AbilitySlice implements Component.TouchE
         // true,所有的动作都会触发当前方法
         // false,只有第一个动作会触发当前方法,后续动作就不会触发方法
         return true;
+    }
+
+    @Override
+    public void onDoubleClick(Component component) {
+        // 修改图片
+        if (!like) {
+            like = true;
+            image.setImageAndDecodeBounds(ResourceTable.Media_like);
+        }
+    }
+
+    @Override
+    public void onClick(Component component) {
+        // 单击,可以点赞,也可以取消点赞
+        if (like) {
+            like = false;
+            image.setImageAndDecodeBounds(ResourceTable.Media_notLike);
+        } else {
+            like = true;
+            image.setImageAndDecodeBounds(ResourceTable.Media_like);
+        }
     }
 }
