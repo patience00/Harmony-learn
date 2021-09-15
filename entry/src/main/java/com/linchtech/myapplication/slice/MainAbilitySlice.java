@@ -41,7 +41,7 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
         text = (Text) findComponentById(ResourceTable.Id_text_helloworld);
         text2 = (Text) findComponentById(ResourceTable.Id_text2);
 
-        DirectionalLayout layout = (DirectionalLayout) findComponentById(ResourceTable.Id_move);
+        DirectionalLayout layout = (DirectionalLayout) findComponentById(ResourceTable.Id_main);
         layout.setTouchEventListener(this);
     }
 
@@ -102,27 +102,34 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
             MmiPoint position = touchEvent.getPointerPosition(0);
             x = position.getX();
             y = position.getY();
-            text.setText("按下");
 
         } else if (action == TouchEvent.POINT_MOVE) {
-            text.setText("移动");
         } else if (action == TouchEvent.PRIMARY_POINT_UP) {
             MmiPoint position = touchEvent.getPointerPosition(0);
             float endX = position.getX();
             float endY = position.getY();
 
             if (endY > y && Math.abs(endX - x) < 100) {
-                text.setText("向下滑动");
+//                text.setText("向下滑动");
             }
             if (endY < y && Math.abs(endX - x) < 100) {
-                text.setText("上滑动");
+//                text.setText("上滑动");
             }
 
             if (endX > x && Math.abs(endY - y) < 100) {
-                text2.setText("右画");
+//                text2.setText("右滑动");
             }
             if (endX < x && Math.abs(endY - y) < 100) {
-                text2.setText("左滑动");
+//                text2.setText("左滑动");
+                Intent intent = new Intent();
+                Operation operation = new Intent.OperationBuilder()
+                        .withDeviceId("") // 要跳转的设备
+                        .withBundleName("com.linchtech.myapplication") // 要跳转的应用
+                        .withAbilityName("com.linchtech.myapplication.ability.SecondAbility")// 要跳转的页面
+                        .build();
+                // 把打包后的operation设置到意图中
+                intent.setOperation(operation);
+                startAbility(intent);
             }
 
         }

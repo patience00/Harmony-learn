@@ -11,7 +11,7 @@
   "module": {
     "package": "com.linchtech.myapplication",
     "name": ".MyApplication",
-    "mainAbility": "com.linchtech.myapplication.MainAbility",
+    "mainAbility": "com.linchtech.myapplication.ability.MainAbility",
     "deviceType": [
       "phone"
     ],
@@ -34,7 +34,7 @@
           }
         ],
         "orientation": "unspecified",
-        "name": "com.linchtech.myapplication.MainAbility",
+        "name": "com.linchtech.myapplication.ability.MainAbility",
         "icon": "$media:icon",
         "description": "$string:mainability_description",
         "label": "$string:entry_MainAbility",
@@ -43,19 +43,28 @@
       },
       {
         "orientation": "unspecified",
-        "name": "com.linchtech.myapplication.SecondMainAbility",
+        "name": "com.linchtech.myapplication.ability.LongClickAblity",
         "icon": "$media:icon",
-        "description": "$string:secondmainability_description",
-        "label": "$string:entry_SecondMainAbility",
+        "description": "$string:longclickablity_description",
+        "label": "$string:entry_LongClickAblity",
         "type": "page",
         "launchType": "standard"
       },
       {
         "orientation": "unspecified",
-        "name": "com.linchtech.myapplication.LongClickAblity",
+        "name": "com.linchtech.myapplication.ability.SecondAbility",
         "icon": "$media:icon",
-        "description": "$string:longclickablity_description",
-        "label": "$string:entry_LongClickAblity",
+        "description": "$string:secondability_description",
+        "label": "$string:entry_SecondAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.linchtech.myapplication.ability.ThirdPage",
+        "icon": "$media:icon",
+        "description": "$string:thirdpage_description",
+        "label": "$string:entry_ThirdPage",
         "type": "page",
         "launchType": "standard"
       }

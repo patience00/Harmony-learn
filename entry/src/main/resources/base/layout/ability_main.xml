@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DirectionalLayout
-    ohos:id="$+id:move"
+    ohos:id="$+id:main"
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_parent"
     ohos:width="match_parent"
@@ -22,7 +22,7 @@
         ohos:width="match_content"
         ohos:background_element="$graphic:background_ability_main"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="ctnmm"
+        ohos:text="第一页"
         ohos:text_size="40vp"
         />
     <Text
@@ -31,7 +31,7 @@
         ohos:width="match_content"
         ohos:background_element="$graphic:background_ability_main"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="ctnmm"
+        ohos:text="第一页"
         ohos:text_size="40vp"
         />
 <!--    <Button-->

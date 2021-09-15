@@ -1,4 +1,4 @@
-package com.linchtech.myapplication;
+package com.linchtech.myapplication.ability;
 
 import com.linchtech.myapplication.slice.MainAbilitySlice;
 import ohos.aafwk.ability.Ability;
