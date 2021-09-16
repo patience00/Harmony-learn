@@ -70,10 +70,28 @@
       },
       {
         "orientation": "unspecified",
-        "name": "com.linchtech.myapplication.ability.VideoAbility",
+        "name": "com.linchtech.myapplication.ability.JokeAbility",
         "icon": "$media:icon",
-        "description": "$string:videoability_description",
-        "label": "$string:entry_VideoAbility",
+        "description": "$string:jokeability_description",
+        "label": "$string:entry_JokeAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.linchtech.myapplication.ability.LoginAbility",
+        "icon": "$media:icon",
+        "description": "$string:loginability_description",
+        "label": "$string:entry_LoginAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.linchtech.myapplication.ability.ResetPassWordAbility",
+        "icon": "$media:icon",
+        "description": "$string:resetpasswordability_description",
+        "label": "$string:entry_ResetPassWordAbility",
         "type": "page",
         "launchType": "standard"
       }

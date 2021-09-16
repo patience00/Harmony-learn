@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="#f2f2f2"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:username"
+        ohos:height="50vp"
+        ohos:width="320vp"
+        ohos:background_element="#FFF"
+        ohos:focus_border_enable="true"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="请输入手机号"
+        ohos:text_alignment="center"
+        ohos:text_color="#999"
+        ohos:text_size="17vp"
+        ohos:top_margin="100vp"
+        />
+
+    <Text
+        ohos:id="$+id:password"
+        ohos:height="50vp"
+        ohos:width="320vp"
+        ohos:background_element="#FFF"
+        ohos:focus_border_enable="true"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="请输入密码"
+        ohos:text_alignment="center"
+        ohos:text_color="#999"
+        ohos:text_size="17vp"
+        ohos:top_margin="15vp"
+        />
+
+    <Text
+        ohos:id="$+id:forgotPassword"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:background_element="#f2f2f2"
+
+        ohos:focus_border_enable="true"
+        ohos:layout_alignment="right"
+        ohos:right_margin="20vp"
+        ohos:text="忘记密码?"
+        ohos:text_color="#979797"
+        ohos:text_size="17vp"
+        ohos:top_margin="15vp"
+        />
+
+    <Button
+        ohos:height="47vp"
+        ohos:width="320vp"
+        ohos:background_element="#21a8fd"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="登录"
+        ohos:text_alignment="center"
+        ohos:text_color="#fefefe"
+        ohos:text_size="24vp"
+        ohos:top_margin="78vp"
+
+        />
+
+    <Button
+        ohos:height="47vp"
+        ohos:width="320vp"
+        ohos:background_element="#21a8fd"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="注册"
+        ohos:text_alignment="center"
+        ohos:text_color="#fefefe"
+        ohos:text_size="24vp"
+        ohos:top_margin="13vp"
+
+        />
+
+</DirectionalLayout>

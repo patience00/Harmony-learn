@@ -18,49 +18,23 @@
 <!--        />-->
     <Text
         ohos:id="$+id:text_helloworld"
-        ohos:height="match_content"
-        ohos:width="match_content"
-        ohos:background_element="$graphic:background_ability_main"
+        ohos:height="210px"
+        ohos:width="210px"
+        ohos:background_element="#daa4ad"
         ohos:layout_alignment="horizontal_center"
         ohos:text="第一页"
-        ohos:text_size="40vp"
+        ohos:text_size="40px"
         />
     <Text
         ohos:id="$+id:text2"
-        ohos:height="match_content"
-        ohos:width="match_content"
-        ohos:background_element="$graphic:background_ability_main"
+        ohos:height="70vp"
+        ohos:width="70vp"
+        ohos:background_element="#1fbcd"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="第一页"
-        ohos:text_size="40vp"
+        ohos:multiple_lines="true"
+        ohos:text="文字太多,必须换行12312312312312"
+        ohos:text_size="10fp"
         />
-<!--    <Button-->
-<!--        ohos:id="$+id:button1"-->
-<!--        ohos:height="match_content"-->
-<!--        ohos:width="match_content"-->
-<!--        ohos:background_element="blue"-->
-<!--        ohos:text_size="40fp"-->
-<!--        ohos:bottom_margin="40px"-->
-<!--        ohos:top_margin="40px"-->
-<!--        ohos:text="单击" />-->
-<!--    <Button-->
-<!--        ohos:id="$+id:button2"-->
-<!--        ohos:height="match_content"-->
-<!--        ohos:width="match_content"-->
-<!--        ohos:background_element="blue"-->
-<!--        ohos:text_size="40fp"-->
-<!--        ohos:bottom_margin="40px"-->
-<!--        ohos:top_margin="40px"-->
-<!--        ohos:text="双击" />-->
-<!--    <Button-->
-<!--        ohos:id="$+id:button3"-->
-<!--        ohos:height="match_content"-->
-<!--        ohos:width="match_content"-->
-<!--        ohos:background_element="green"-->
-<!--        ohos:text_size="40fp"-->
-<!--        ohos:bottom_margin="40px"-->
-<!--        ohos:top_margin="40px"-->
 
-<!--        ohos:text="长按" />-->
 
 </DirectionalLayout>

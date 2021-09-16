@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DirectionalLayout
-    ohos:id="$+id:second"
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_parent"
     ohos:width="match_parent"
     ohos:alignment="center"
-    ohos:background_element="$media:beauty"
     ohos:orientation="vertical">
 
     <Text
-        ohos:id="$+id:secondPageTitle"
+        ohos:id="$+id:text_helloworld"
         ohos:height="match_content"
         ohos:width="match_content"
-        ohos:background_element="#00cac1c4"
+        ohos:background_element="$graphic:background_ability_joke"
         ohos:layout_alignment="horizontal_center"
-        ohos:text="second"
+        ohos:text="$string:jokeability_HelloWorld"
         ohos:text_size="40vp"
         />
-
-    <Image
-        ohos:id="$+id:notLike"
-        ohos:height="match_content"
-        ohos:width="match_content"
-        
-        ohos:image_src="$media:notLike"
-        ohos:background_element="#00cac111"/>
-
 
 </DirectionalLayout>

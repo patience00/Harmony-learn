@@ -5,6 +5,8 @@ import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.Component;
 import ohos.agp.components.Image;
+import ohos.global.resource.NotExistException;
+import ohos.global.resource.Resource;
 import ohos.media.codec.Codec;
 import ohos.media.codec.CodecDescriptionList;
 import ohos.media.common.AVDescription;
@@ -15,6 +17,7 @@ import ohos.media.common.sessioncore.AVElement;
 import ohos.media.player.Player;
 import ohos.utils.net.Uri;
 
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.List;
 

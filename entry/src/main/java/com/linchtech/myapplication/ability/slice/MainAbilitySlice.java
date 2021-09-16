@@ -110,6 +110,15 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
 
             if (endY > y && Math.abs(endX - x) < 100) {
 //                text.setText("向下滑动");
+                Intent intent = new Intent();
+                Operation operation = new Intent.OperationBuilder()
+                        .withDeviceId("") // 要跳转的设备
+                        .withBundleName("com.linchtech.myapplication") // 要跳转的应用
+                        .withAbilityName("com.linchtech.myapplication.ability.LoginAbility")// 要跳转的页面
+                        .build();
+                // 把打包后的operation设置到意图中
+                intent.setOperation(operation);
+                startAbility(intent);
             }
             if (endY < y && Math.abs(endX - x) < 100) {
 //                text.setText("上滑动");

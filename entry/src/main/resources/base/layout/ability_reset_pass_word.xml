@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:background_element="#f2f2f2"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:phoneNumber"
+        ohos:height="50vp"
+        ohos:width="319vp"
+        ohos:background_element="$graphic:background_ability_reset_pass_word"
+        ohos:text="请输入手机号"
+        ohos:text_size="17vp"
+        ohos:text_alignment="center"
+        ohos:top_margin="10vp"
+        ohos:layout_alignment="horizontal_center"
+        />
+    <Text
+        ohos:id="$+id:verifyCode"
+        ohos:height="50vp"
+        ohos:width="319vp"
+        ohos:background_element="$graphic:background_ability_reset_pass_word"
+        ohos:text="请输入验证码"
+        ohos:text_size="17vp"
+        ohos:text_alignment="center"
+        ohos:top_margin="10vp"
+        ohos:layout_alignment="horizontal_center"
+        />
+
+</DirectionalLayout>

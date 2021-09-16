@@ -83,6 +83,42 @@
     {
       "name": "entry_VideoAbility",
       "value": "entry_VideoAbility"
+    },
+    {
+      "name": "jokeability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "jokeability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_JokeAbility",
+      "value": "entry_JokeAbility"
+    },
+    {
+      "name": "loginability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "loginability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_LoginAbility",
+      "value": "entry_LoginAbility"
+    },
+    {
+      "name": "resetpasswordability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "resetpasswordability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_ResetPassWordAbility",
+      "value": "entry_ResetPassWordAbility"
     }
   ]
 }
