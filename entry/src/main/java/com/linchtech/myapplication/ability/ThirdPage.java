@@ -1,6 +1,6 @@
 package com.linchtech.myapplication.ability;
 
-import com.linchtech.myapplication.slice.ThirdPageSlice;
+import com.linchtech.myapplication.ability.slice.ThirdPageSlice;
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
 

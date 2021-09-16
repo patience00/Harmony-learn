@@ -71,6 +71,18 @@
     {
       "name": "thirdpage_HelloWorld",
       "value": "Hello World"
+    },
+    {
+      "name": "entry_VideoAbility",
+      "value": "entry_VideoAbility"
+    },
+    {
+      "name": "videoability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "videoability_HelloWorld",
+      "value": "Hello World"
     }
   ]
 }
