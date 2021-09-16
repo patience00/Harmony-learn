@@ -11,22 +11,34 @@
         ohos:height="50vp"
         ohos:width="319vp"
         ohos:background_element="$graphic:background_ability_reset_pass_word"
-        ohos:text="请输入手机号"
-        ohos:text_size="17vp"
-        ohos:text_alignment="center"
-        ohos:top_margin="10vp"
         ohos:layout_alignment="horizontal_center"
+        ohos:text="请输入手机号"
+        ohos:text_alignment="center"
+        ohos:text_size="17vp"
+        ohos:top_margin="10vp"
         />
+
     <Text
         ohos:id="$+id:verifyCode"
         ohos:height="50vp"
         ohos:width="319vp"
         ohos:background_element="$graphic:background_ability_reset_pass_word"
-        ohos:text="请输入验证码"
-        ohos:text_size="17vp"
-        ohos:text_alignment="center"
-        ohos:top_margin="10vp"
         ohos:layout_alignment="horizontal_center"
+        ohos:text="请输入验证码"
+        ohos:text_alignment="center"
+        ohos:text_size="17vp"
+        ohos:top_margin="10vp"
         />
 
+    <Button
+        ohos:height="47vp"
+        ohos:width="319vp"
+        ohos:background_element="@21a8fd"
+        ohos:layout_alignment="horizontal_center"
+        ohos:text="确定"
+        ohos:text_alignment="center"
+        ohos:text_color="#21a8fd"
+        ohos:text_size="24vp"
+        ohos:top_margin="13vp"
+        />
 </DirectionalLayout>
