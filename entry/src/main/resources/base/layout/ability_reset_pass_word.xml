@@ -33,11 +33,11 @@
     <Button
         ohos:height="47vp"
         ohos:width="319vp"
-        ohos:background_element="@21a8fd"
+        ohos:background_element="#21a8fd"
         ohos:layout_alignment="horizontal_center"
         ohos:text="确定"
         ohos:text_alignment="center"
-        ohos:text_color="#21a8fd"
+        ohos:text_color="#fefefe"
         ohos:text_size="24vp"
         ohos:top_margin="13vp"
         />

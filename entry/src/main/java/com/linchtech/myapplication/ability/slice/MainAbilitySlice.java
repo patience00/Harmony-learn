@@ -12,8 +12,6 @@ import ohos.agp.utils.Color;
 import ohos.multimodalinput.event.MmiPoint;
 import ohos.multimodalinput.event.TouchEvent;
 
-import java.util.UUID;
-
 public class MainAbilitySlice extends AbilitySlice implements Component.ClickedListener, Component.TouchEventListener, Component.LongClickedListener, Component.DoubleClickedListener {
 
     private Button button;
@@ -39,6 +37,7 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
 //        longClickButton.setLongClickedListener(this);
         text = (Text) findComponentById(ResourceTable.Id_text_helloworld);
         text2 = (Text) findComponentById(ResourceTable.Id_text2);
+        text2.setClickedListener(this);
 
         DirectionalLayout layout = (DirectionalLayout) findComponentById(ResourceTable.Id_main);
         layout.setTouchEventListener(this);
@@ -66,11 +65,12 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
 //            intent.setOperation(operation);
 //            startAbility(intent);
 //        }
-        text = (Text) findComponentById(ResourceTable.Id_text_helloworld);
-        text2 = (Text) findComponentById(ResourceTable.Id_text2);
-        text.setText(UUID.randomUUID().toString().split("-")[0]);
-        text.setTextColor(Color.CYAN);
+//        text.setText(UUID.randomUUID().toString().split("-")[0]);
+//        text.setTextColor(Color.CYAN);
 
+        // 开启跑马灯效果
+        Text t = (Text) component;
+        t.startAutoScrolling();
 
     }
 

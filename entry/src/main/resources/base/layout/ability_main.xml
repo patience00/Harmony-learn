@@ -31,9 +31,11 @@
         ohos:width="70vp"
         ohos:background_element="#1fbcd"
         ohos:layout_alignment="horizontal_center"
-        ohos:multiple_lines="true"
-        ohos:text="文字太多,必须换行12312312312312"
-        ohos:text_size="10fp"
+        ohos:text="文字太多,必须换行12范德萨范德萨范德萨范德萨范德萨发撒范德萨312312312312"
+        ohos:truncation_mode="auto_scrolling"
+        ohos:auto_scrolling_count="unlimited"
+        ohos:auto_scrolling_duration="2000"
+        ohos:text_size="20fp"
         />
 
 
