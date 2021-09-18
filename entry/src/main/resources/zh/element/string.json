@@ -119,6 +119,18 @@
     {
       "name": "resetpasswordability_HelloWorld",
       "value": "你好，世界"
+    },
+    {
+      "name": "entry_GirlAbility",
+      "value": "entry_GirlAbility"
+    },
+    {
+      "name": "girlability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "girlability_HelloWorld",
+      "value": "你好，世界"
     }
   ]
 }

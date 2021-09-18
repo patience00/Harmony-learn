@@ -94,6 +94,15 @@
         "label": "$string:entry_ResetPassWordAbility",
         "type": "page",
         "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.linchtech.myapplication.ability.GirlAbility",
+        "icon": "$media:icon",
+        "description": "$string:girlability_description",
+        "label": "$string:entry_GirlAbility",
+        "type": "page",
+        "launchType": "standard"
       }
     ]
   }
