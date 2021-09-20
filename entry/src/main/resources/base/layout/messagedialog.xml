@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="100vp"
+    ohos:width="150vp"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <Text
+        ohos:id="$+id:alertTitle"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_weight="400"
+        ohos:text_size="25vp"
+        />
+    <Text
+        ohos:id="$+id:alertContent"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text_weight="20"
+        ohos:text_size="15vp"
+        />
+
+    <Button
+        ohos:id="$+id:likeGirl"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="喜欢"
+        ohos:text_size="10vp"
+        ohos:layout_alignment="left"
+        ohos:text_color="#e25757"
+        />
+    <Button
+        ohos:id="$+id:disLikeGirl"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:text="不喜欢"
+        ohos:layout_alignment="right"
+        ohos:text_size="10vp"
+        ohos:top_margin="10vp"
+        />
+
+</DirectionalLayout>

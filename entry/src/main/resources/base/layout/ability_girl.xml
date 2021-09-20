@@ -8,8 +8,8 @@
 
     <Image
         ohos:id="$+id:girlList"
-        ohos:height="match_content"
-        ohos:width="match_content"
+        ohos:height="300vp"
+        ohos:width="150vp"
         ohos:image_src="$media:girl1"
         />
 
@@ -17,7 +17,7 @@
         ohos:id="$+id:girlName"
         ohos:height="50vp"
         ohos:width="150vp"
-        ohos:text="如花"
+        ohos:text="姓名:如花"
         ohos:text_size="20vp"
         />
 
@@ -25,7 +25,7 @@
         ohos:id="$+id:girlAge"
         ohos:height="50vp"
         ohos:width="150vp"
-        ohos:text="18"
+        ohos:text="年龄:17"
         ohos:text_size="20vp"
         />
 
@@ -43,10 +43,10 @@
         ohos:id="$+id:alert"
         ohos:height="40vp"
         ohos:width="150vp"
-        ohos:top_margin="10vp"
-        ohos:text="点我"
         ohos:background_element="#66a1ff"
+        ohos:text="点我"
         ohos:text_size="40vp"
+        ohos:top_margin="10vp"
         />
 
 </DirectionalLayout>
