@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<DirectionalLayout
+<StackLayout
     xmlns:ohos="http://schemas.huawei.com/res/ohos"
     ohos:height="match_parent"
     ohos:width="match_parent"
+    ohos:id="$+id:stack_layout"
     ohos:alignment="center"
     ohos:orientation="vertical">
 
-    <Image
-        ohos:id="$+id:video"
+    <SurfaceProvider
+        ohos:id="$+id:surface_provider_video"
         ohos:height="match_content"
-        ohos:width="match_content"
-        ohos:image_src="$media:videoPlay"
+        ohos:width="match_parent"
         />
 
-</DirectionalLayout>
+    <Image
+        ohos:id="$+id:likeVideo"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:image_src="$media:notLike"
+        ohos:layout_alignment="vertical_center"
+        ohos:right_margin="10vp"
+        ohos:background_element="#00cac111"/>
+
+</StackLayout>

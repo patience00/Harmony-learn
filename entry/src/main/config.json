@@ -67,6 +67,14 @@
         "label": "$string:entry_ThirdPage",
         "type": "page",
         "launchType": "standard"
+      }, {
+        "orientation": "unspecified",
+        "name": "com.linchtech.myapplication.ability.VideoAbility",
+        "icon": "$media:icon",
+        "description": "$string:thirdpage_description",
+        "label": "$string:videoPage",
+        "type": "page",
+        "launchType": "standard"
       },
       {
         "orientation": "unspecified",

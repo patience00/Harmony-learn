@@ -22,7 +22,8 @@
         ohos:id="$+id:notLike"
         ohos:height="match_content"
         ohos:width="match_content"
-        
+        ohos:layout_alignment="right"
+        ohos:right_margin="10vp"
         ohos:image_src="$media:notLike"
         ohos:background_element="#00cac111"/>
 
