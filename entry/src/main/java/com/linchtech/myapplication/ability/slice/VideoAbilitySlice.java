@@ -4,13 +4,11 @@ import com.linchtech.myapplication.ResourceTable;
 import com.linchtech.myapplication.utils.Utils;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.Button;
 import ohos.agp.components.Component;
-import ohos.agp.components.ComponentContainer;
 import ohos.agp.components.Image;
 import ohos.agp.components.surfaceprovider.SurfaceProvider;
+import ohos.agp.graphics.Surface;
 import ohos.agp.graphics.SurfaceOps;
-import ohos.global.resource.RawFileDescriptor;
 import ohos.media.common.Source;
 import ohos.media.player.Player;
 
@@ -35,12 +33,6 @@ public class VideoAbilitySlice extends AbilitySlice implements Component.Clicked
         super.setUIContent(ResourceTable.Layout_ability_video);
         mSurfaceProvider = (SurfaceProvider) findComponentById(ResourceTable.Id_surface_provider_video);
         image = (Image) findComponentById(ResourceTable.Id_likeVideo);
-        // mBtnVideoPlay = (Button) findComponentById(ResourceTable.Id_btn_video_play);
-        // mBtnVideoPlay.setClickedListener(this);
-        // mBtnVideoPause = (Button) findComponentById(ResourceTable.Id_btn_video_pause);
-        // mBtnVideoPause.setClickedListener(this);
-        // mBtnVideoStop = (Button) findComponentById(ResourceTable.Id_btn_video_stop);
-        // mBtnVideoStop.setClickedListener(this);
         mSurfaceProvider.setClickedListener(this);
         mSurfaceProvider.setDoubleClickedListener(this);
         image.setClickedListener(this);
@@ -85,8 +77,10 @@ public class VideoAbilitySlice extends AbilitySlice implements Component.Clicked
             System.out.println("点击播放:" + play);
             try {
                 if (!play) {
+                    System.out.println("播放");
                     play = mPlayer.play();
                 } else {
+                    System.out.println("暂停");
                     play = mPlayer.pause();
                     play = false;
                 }
@@ -126,31 +120,85 @@ public class VideoAbilitySlice extends AbilitySlice implements Component.Clicked
         // 创建播放器对象
         mPlayer = new Player(this);
         try {
-            // 打开播放音频源文件
-            RawFileDescriptor fd = getResourceManager()
-                    .getRawFileEntry("resources/base/media/1234.mp4")
-                    .openRawFileDescriptor();
-            Source source = new Source(fd.getFileDescriptor(),
-                    fd.getStartPosition(),
-                    fd.getFileSize());
-           /* AVDescription bean =
-                    new AVDescription.Builder()
-                            .setTitle("web_video_01")
-                            .setIMediaUri(Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
-                            .setMediaId("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-                            .build();
-            AVElement avElement = new AVElement(bean, AVElement.AVELEMENT_FLAG_PLAYABLE);
-            Source source = new Source(avElement.getAVDescription().getMediaUri().toString());*/
-
-            // 设置音频源
-            mPlayer.setSource(source);
+            // 打开播放视频源文件
+            if (mSurfaceProvider.getSurfaceOps().isPresent()) {
+                Surface surface = mSurfaceProvider.getSurfaceOps().get().getSurface();
+                Source source = new Source("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4");
+                // 设置音频源
+                mPlayer.setSource(source);
+                mPlayer.setVideoSurface(surface);
+                mPlayer.setPlayerCallback(new VideoPlayerCallback());
+                mPlayer.prepare();
+                mSurfaceProvider.setTop(0);
+            }
 
         } catch (Exception e) {
             Utils.log("Exception : " + e.getLocalizedMessage());
         }
         // 准备播放
-        mPlayer.prepare();
+        // mPlayer.prepare();
         // 设置Surface配置
-        mPlayer.setSurfaceOps(mSurfaceProvider.getSurfaceOps().get());
+        // mPlayer.setSurfaceOps(mSurfaceProvider.getSurfaceOps().get());
+    }
+
+    private class VideoPlayerCallback implements Player.IPlayerCallback {
+
+        @Override
+
+        public void onPrepared() {
+            System.out.println("onPrepared");
+        }
+
+
+        @Override
+        public void onMessage(int i, int i1) {
+            System.out.println("onMessage");
+        }
+
+        @Override
+        public void onError(int i, int i1) {
+            System.out.println("onError: i=" + i + ", i1=" + i1);
+        }
+
+
+        @Override
+        public void onResolutionChanged(int i, int i1) {
+            System.out.println("onResolutionChanged");
+        }
+
+
+        @Override
+        public void onPlayBackComplete() {
+            System.out.println("onPlayBackComplete");
+            if (mPlayer != null) {
+                mPlayer.stop();
+                mPlayer = null;
+            }
+        }
+
+
+        @Override
+        public void onRewindToComplete() {
+            System.out.println("onRewindToComplete");
+        }
+
+
+        @Override
+        public void onBufferingChange(int i) {
+            System.out.println("onBufferingChange");
+        }
+
+
+        @Override
+        public void onNewTimedMetaData(Player.MediaTimedMetaData mediaTimedMetaData) {
+            System.out.println("onNewTimedMetaData");
+        }
+
+
+        @Override
+        public void onMediaTimeIncontinuity(Player.MediaTimeInfo mediaTimeInfo) {
+            System.out.println("onMediaTimeIncontinuity");
+        }
+
     }
 }

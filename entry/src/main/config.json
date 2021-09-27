@@ -7,7 +7,13 @@
       "name": "1.0.0"
     }
   },
-  "deviceConfig": {},
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
   "module": {
     "package": "com.linchtech.myapplication",
     "name": ".MyApplication",
@@ -21,6 +27,11 @@
       "moduleType": "entry",
       "installationFree": false
     },
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      }
+    ],
     "abilities": [
       {
         "skills": [
@@ -67,7 +78,8 @@
         "label": "$string:entry_ThirdPage",
         "type": "page",
         "launchType": "standard"
-      }, {
+      },
+      {
         "orientation": "unspecified",
         "name": "com.linchtech.myapplication.ability.VideoAbility",
         "icon": "$media:icon",
@@ -109,6 +121,15 @@
         "icon": "$media:icon",
         "description": "$string:girlability_description",
         "label": "$string:entry_GirlAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "orientation": "unspecified",
+        "name": "com.linchtech.myapplication.ability.WebImageAbility",
+        "icon": "$media:icon",
+        "description": "$string:webimageability_description",
+        "label": "$string:entry_WebImageAbility",
         "type": "page",
         "launchType": "standard"
       }

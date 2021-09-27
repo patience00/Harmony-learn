@@ -71,7 +71,8 @@
     {
       "name": "entry_ThirdPage",
       "value": "entry_ThirdPage"
-    }, {
+    },
+    {
       "name": "videoPage",
       "value": "videoPage"
     },
@@ -134,6 +135,18 @@
     {
       "name": "entry_GirlAbility",
       "value": "entry_GirlAbility"
+    },
+    {
+      "name": "webimageability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "webimageability_HelloWorld",
+      "value": "Hello World"
+    },
+    {
+      "name": "entry_WebImageAbility",
+      "value": "entry_WebImageAbility"
     }
   ]
 }

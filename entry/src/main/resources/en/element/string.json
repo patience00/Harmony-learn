@@ -131,6 +131,18 @@
     {
       "name": "girlability_HelloWorld",
       "value": "Hello World"
+    },
+    {
+      "name": "entry_WebImageAbility",
+      "value": "entry_WebImageAbility"
+    },
+    {
+      "name": "webimageability_description",
+      "value": "Java_Empty Ability"
+    },
+    {
+      "name": "webimageability_HelloWorld",
+      "value": "Hello World"
     }
   ]
 }

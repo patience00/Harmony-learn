@@ -7,7 +7,6 @@ import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
 import ohos.agp.components.*;
 import ohos.agp.window.dialog.CommonDialog;
-import ohos.agp.window.dialog.IDialog;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -22,13 +21,13 @@ public class GirlAbilitySlice extends AbilitySlice implements Component.ClickedL
     public static ArrayList<Girl> girls = Lists.newArrayList();
 
     static {
-        girls.add(new Girl(ResourceTable.Media_girl1, "哈哈哈", 16, "a"));
-        girls.add(new Girl(ResourceTable.Media_girl2, "啊啊啊", 21, "aaa"));
-        girls.add(new Girl(ResourceTable.Media_girl3, "滚滚滚", 20, "qqq"));
-        girls.add(new Girl(ResourceTable.Media_girl4, "是是是", 21, "www"));
-        girls.add(new Girl(ResourceTable.Media_girl5, "啧啧啧", 22, "eee"));
-        girls.add(new Girl(ResourceTable.Media_girl6, "嘻嘻嘻", 23, "rrr"));
-        girls.add(new Girl(ResourceTable.Media_girl7, "那那那", 19, "ttt"));
+        girls.add(new Girl(ResourceTable.Media_girl11, "哈哈哈", 16, "a"));
+        girls.add(new Girl(ResourceTable.Media_girl12, "啊啊啊", 21, "aaa"));
+        girls.add(new Girl(ResourceTable.Media_girl13, "滚滚滚", 20, "qqq"));
+        girls.add(new Girl(ResourceTable.Media_girl14, "是是是", 21, "www"));
+        girls.add(new Girl(ResourceTable.Media_girl15, "啧啧啧", 22, "eee"));
+        girls.add(new Girl(ResourceTable.Media_girl16, "嘻嘻嘻", 23, "rrr"));
+        girls.add(new Girl(ResourceTable.Media_girl17, "那那那", 19, "ttt"));
     }
 
 

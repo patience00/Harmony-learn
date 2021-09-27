@@ -20,6 +20,7 @@
         ohos:image_src="$media:notLike"
         ohos:layout_alignment="vertical_center"
         ohos:right_margin="10vp"
+        ohos:alpha="0.5"
         ohos:background_element="#00cac111"/>
 
 </StackLayout>

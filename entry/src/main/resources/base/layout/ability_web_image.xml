@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    ohos:id="$+id:webImageLayout"
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+
+    <Button
+        ohos:id="$+id:nextGirl"
+        ohos:height="50vp"
+        ohos:width="150vp"
+        ohos:background_element="#92d050"
+        ohos:text="下一个"
+        ohos:text_color="#fff"
+        ohos:text_size="20vp"
+        />
+
+</DirectionalLayout>

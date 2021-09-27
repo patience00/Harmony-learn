@@ -2,6 +2,7 @@ package com.linchtech.myapplication.ability.slice;
 
 import com.linchtech.myapplication.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
+import ohos.aafwk.ability.SystemMemoryInfo;
 import ohos.aafwk.content.Intent;
 import ohos.aafwk.content.Operation;
 import ohos.agp.components.Button;
@@ -9,6 +10,7 @@ import ohos.agp.components.Component;
 import ohos.agp.components.DirectionalLayout;
 import ohos.agp.components.Text;
 import ohos.agp.utils.Color;
+import ohos.data.usage.StatVfs;
 import ohos.multimodalinput.event.MmiPoint;
 import ohos.multimodalinput.event.TouchEvent;
 
@@ -27,6 +29,22 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
+
+        // 获取内存信息
+        SystemMemoryInfo systemMemoryInfo = new SystemMemoryInfo();
+        getAbilityManager().getSystemMemoryInfo(systemMemoryInfo);
+        System.out.println(systemMemoryInfo.isLowSysMemory());
+        System.out.println(systemMemoryInfo.getAvailSysMem());
+        System.out.println(systemMemoryInfo.getThreshold());
+        System.out.println(systemMemoryInfo.getTotalSysMem());
+        // 外部存储
+        StatVfs statVfs = new StatVfs(getExternalCacheDir().getPath());
+        System.out.println(getExternalCacheDir().getPath());
+        System.out.println(StatVfs.isSupported());
+        System.out.println(statVfs.getSpace());
+        System.out.println(statVfs.getFreeSpace());
+
+
 //        button = (Button) findComponentById(ResourceTable.Id_button1);
 //        button.setClickedListener(this::onClick);
 //
@@ -92,8 +110,8 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
     @Override
     public boolean onTouchEvent(Component component, TouchEvent touchEvent) {
         System.out.println("!!!!!!!!!!!");
-//        text.setText("滑动");
-//        text.setTextColor(Color.BLUE);
+       // text.setText("滑动");
+       // text.setTextColor(Color.BLUE);
 
         int action = touchEvent.getAction();
         if (action == TouchEvent.PRIMARY_POINT_DOWN) {
@@ -109,7 +127,7 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
             float endY = position.getY();
 
             if (endY > y && Math.abs(endX - x) < 100) {
-//                text.setText("向下滑动");
+               text.setText("向下滑动");
                 Intent intent = new Intent();
                 Operation operation = new Intent.OperationBuilder()
                         .withDeviceId("") // 要跳转的设备
@@ -121,7 +139,7 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
                 startAbility(intent);
             }
             if (endY < y && Math.abs(endX - x) < 100) {
-//                text.setText("上滑动");
+               text.setText("上滑动");
                 Intent intent = new Intent();
                 Operation operation = new Intent.OperationBuilder()
                         .withDeviceId("") // 要跳转的设备
@@ -134,10 +152,19 @@ public class MainAbilitySlice extends AbilitySlice implements Component.ClickedL
             }
 
             if (endX > x && Math.abs(endY - y) < 100) {
-//                text2.setText("右滑动");
+               // text2.setText("左滑动");
+                Intent intent = new Intent();
+                Operation operation = new Intent.OperationBuilder()
+                        .withDeviceId("") // 要跳转的设备
+                        .withBundleName("com.linchtech.myapplication") // 要跳转的应用
+                        .withAbilityName("com.linchtech.myapplication.ability.WebImageAbility")// 要跳转的页面
+                        .build();
+                // 把打包后的operation设置到意图中
+                intent.setOperation(operation);
+                startAbility(intent);
             }
             if (endX < x && Math.abs(endY - y) < 100) {
-//                text2.setText("左滑动");
+               // text2.setText("右滑动");
                 Intent intent = new Intent();
                 Operation operation = new Intent.OperationBuilder()
                         .withDeviceId("") // 要跳转的设备
