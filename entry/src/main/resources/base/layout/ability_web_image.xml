@@ -7,6 +7,13 @@
     ohos:alignment="center"
     ohos:orientation="vertical">
 
+    <Image
+        ohos:id="$+id:net_image_example"
+        ohos:height="match_content"
+        ohos:width="match_content"
+        ohos:layout_alignment="horizontal_center"
+        />
+
 
     <Button
         ohos:id="$+id:nextGirl"

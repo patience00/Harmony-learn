@@ -10,7 +10,7 @@
     <SurfaceProvider
         ohos:id="$+id:surface_provider_video"
         ohos:height="match_content"
-        ohos:width="match_parent"
+        ohos:width="match_content"
         />
 
     <Image

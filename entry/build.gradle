@@ -21,6 +21,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
     implementation 'org.checkerframework.annotatedlib:guava:30.1-jre'
     testImplementation 'junit:junit:4.13'
+    implementation 'io.openharmony.tpc.thirdlib:Ohos-Gif-Drawable:1.0.0'
     ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.200'
 }
 decc {
