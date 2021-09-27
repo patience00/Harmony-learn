@@ -1,29 +1,29 @@
 package com.linchtech.myapplication.ability.slice;
 
 import com.linchtech.myapplication.ResourceTable;
+import com.linchtech.myapplication.utils.ImageReadUtil;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
-import ohos.agp.components.DirectionalLayout;
 import ohos.agp.components.Image;
-import ohos.media.image.ImageSource;
+import ohos.app.dispatcher.TaskDispatcher;
+import ohos.app.dispatcher.task.TaskPriority;
 import ohos.media.image.PixelMap;
-import ohos.media.image.common.PixelFormat;
-
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
 
 public class WebImageAbilitySlice extends AbilitySlice {
 
-    String urlImage = "https://www.harmonyos.com/resource/image/community/20201009-164134eSpace.jpg";
+    // String urlImage = "http://nimg.ws.126.net/?url=http%3A%2F%2Fdingyue.ws.126.net%2F2021%2F0725%2Fb41eb116j00qwt2xq0017c000hs00qog.jpg&thumbnail=650x2147483647&quality=80&type=jpg";
+    String urlImage = "https://scpic.chinaz.net/files/pic/pic9/202109/apic35235.jpg";
+    // String urlImage = "https://tp1.tupiankucdn.com/ws/large/005GOaLIgy1fxg0o36dp4g308c05lqfy.gif";
 
+
+    private Image image;
 
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_web_image);
-
+        this.image = (Image) findComponentById(ResourceTable.Id_net_image_example);
+/*
         HttpURLConnection connection = null;
         DirectionalLayout imageLayout = (DirectionalLayout) findComponentById(ResourceTable.Id_webImageLayout);
 
@@ -57,7 +57,26 @@ public class WebImageAbilitySlice extends AbilitySlice {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
+
+
+        /**
+         * 读取网络数据的耗时操作在TaskDispatcher分发的单独线程中处理，
+         * 否则会报 "NetworkOnMainThreadException"异常
+         */
+        TaskDispatcher refreshUITask = createParallelTaskDispatcher("", TaskPriority.DEFAULT);
+        refreshUITask.syncDispatch(()->{
+            PixelMap pixelMap = ImageReadUtil.createPixelMap(urlImage);
+            getContext().getUITaskDispatcher().asyncDispatch(new Runnable() {
+                @Override
+                public void run() {
+                    //Image组件填充位图数据，ui界面更新
+                    image.setPixelMap(pixelMap);
+                    pixelMap.release();
+                }
+            });
+
+        });
     }
 
     @Override
