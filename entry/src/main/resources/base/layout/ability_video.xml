@@ -6,21 +6,20 @@
     ohos:id="$+id:stack_layout"
     ohos:alignment="center"
     ohos:orientation="vertical">
-
     <SurfaceProvider
         ohos:id="$+id:surface_provider_video"
         ohos:height="match_content"
         ohos:width="match_content"
         />
-
     <Image
         ohos:id="$+id:likeVideo"
         ohos:height="match_content"
         ohos:width="match_content"
         ohos:image_src="$media:notLike"
         ohos:layout_alignment="vertical_center"
-        ohos:right_margin="10vp"
-        ohos:alpha="0.5"
-        ohos:background_element="#00cac111"/>
+        ohos:bottom_margin="100vp"
+        ohos:alpha="0.8"
+        ohos:background_element="#00cac111"
+        />
 
 </StackLayout>
